@@ -1,6 +1,5 @@
 from tkinter import *
 
-from textblob import TextBlob
 
 root = Tk()
 root.title("String Reverser")
@@ -8,7 +7,7 @@ root.geometry("700x400")
 root.config(background="#dae6f6")
 
 
-def check_spelling():
+def string_reverser():
     word = enter_text.get()
     a = word[::-1]
     right = str(a)
@@ -25,7 +24,7 @@ enter_text = Entry(root, justify="center", width=30, font=("poppins", 25), bg="w
 enter_text.pack(pady=10)
 enter_text.focus()
 
-button = Button(root, text="Check", font=("arial", 20, "bold"), fg="white", bg="red", command=check_spelling)
+button = Button(root, text="Check", font=("arial", 20, "bold"), fg="white", bg="red", command=string_reverser)
 button.pack()
 
 spell = Label(root, font=("poppins", 20), bg="#dae6f6", fg="#364971")
